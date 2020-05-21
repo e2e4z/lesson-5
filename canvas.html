@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>Canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <canvas id="myCanvas" width="500" height="250" ></canvas>
+    
+    <canvas id="myCanvas2" width="500" height="250" ></canvas>
+
+<script>
+    var canvas = document.getElementById("myCanvas");
+    var c = canvas.getContext ("2d");
+    c.moveTo(188, 130);
+    var controlX1 = 0;
+    var controlY1 = 0;
+    var controlX2 = 380;
+    var controlY2 = 50;
+    var endX = 250;
+    var endY = 70;
+    c.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY);
+    c.lineWidth = 10;
+    c.strokeStyle = "green";
+    c.stroke();
+    
+     var canvas = document.getElementById("myCanvas2");
+    var c = canvas.getContext ("2d");
+    c.moveTo(30, 400);
+    var controlX1 = .54;
+    var controlY1 = .27;
+    var controlX2 = .12;
+    var controlY2 = .7;
+    var endX = 250;
+    var endY = 300;
+    c.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY);
+    c.lineWidth = 10;
+    c.strokeStyle = "green";
+    c.stroke();
+
+</script>
+</body>
+</html>
